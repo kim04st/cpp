@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+
+class CShape {
+public:
+    virtual void Area() = 0; // 순수 가상 함수
+};
+
+class CRect : public CShape {
+public:
+    void Area() override { cout << "Rect" << endl; }
+};
+
+int main() {
+    CShape* p = new CRect();
+    p->Area();
+    delete p;
+    return 0;
+}
