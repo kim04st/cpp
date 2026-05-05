@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+
+class CBase {
+public:
+    CBase() { cout << "B-In" << endl; }
+    virtual ~CBase() { cout << "B-Out" << endl; } // 가상 소멸자
+};
+
+class CDer : public CBase {
+public:
+    CDer() { cout << "D-In" << endl; }
+    ~CDer() { cout << "D-Out" << endl; }
+};
+
+int main() {
+    CBase* p = new CDer;
+    delete p;
+}
