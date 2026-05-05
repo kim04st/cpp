@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+class CRect {
+    int w, h;
+public:
+    CRect(int w, int h) : w(w), h(h) {}
+
+    void CheckWidth() {
+        try {
+            if (w <= 0) throw "Error";
+            cout << w << endl;
+        }
+        catch (const char* msg) {
+            cout << msg << endl;
+        }
+    }
+
+    void Area() {
+        cout << w * h << endl;
+    }
+};
+
+int main() {
+    CRect me(-5, 4);
+
+    me.CheckWidth();
+
+    return 0;
+}
