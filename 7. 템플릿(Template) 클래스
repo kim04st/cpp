@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+template<typename T>
+
+class CRect {
+    T w, h;
+public:
+    CRect(T w, T h) : w(w), h(h) {}
+    T Area() { return w * h; }
+};
+
+int main() {
+    CRect<double> d(2.2, 3.3);
+    cout << d.Area() << endl;
+    return 0;
+}
