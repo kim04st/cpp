@@ -1,0 +1,19 @@
+#include <iostream>
+#include<memory>
+#include<vector>
+using namespace std;
+
+class CRect {
+    int w, h;
+public:
+    CRect(int w, int h) : w(w), h(h) {}
+    void Area() { cout << w * h << endl; }
+};
+
+int main() {
+    vector<CRect> v = { {2,3},{4,5} };
+    for (auto& n : v) {
+        n.Area();
+    }
+    return 0;
+}
