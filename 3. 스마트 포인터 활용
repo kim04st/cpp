@@ -1,0 +1,16 @@
+#include <iostream>
+#include<memory>
+using namespace std;
+
+class CRect {
+    int w, h;
+public:
+    CRect(int w, int h) : w(w), h(h) {}
+    void Area() { cout << w * h << endl; }
+};
+
+int main() {
+    auto p = make_unique<CRect>(3, 4);
+    p->Area();
+    return 0;
+}
